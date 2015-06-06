@@ -10,17 +10,24 @@
           <%- body %>
         </div>
       </div>
-    </div>
-    <div>
-      
-    </div>
-    <footer class="card clearfix">
-      
-    </footer>
+    </div>  
   </div>
+  <sidebar class="card clearfix">
+    <div class="container-narrow">
+      <div class="row-fluid">
+        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
+      </div>
+    </div>
+  </sidebar>
+  <footer>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  </footer>
+  <%- partial('_partial/after-footer') %>
 </body>
 
-
+<!--
 <body>
   <div id="container">
     <div id="wrap">
@@ -36,4 +43,5 @@
     <%- partial('_partial/after-footer') %>
   </div>
 </body>
+-->
 </html>
