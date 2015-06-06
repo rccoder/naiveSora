@@ -1,0 +1,39 @@
+<%- partial('_partial/head') %>
+<body>
+  <div class="navbar">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+  </div>
+  <div class="container-narrow">
+    <div class="content">
+      <div class="row-fluid">
+        <div class="span12" id="main">
+          <%- body %>
+        </div>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+    <footer class="card clearfix">
+      
+    </footer>
+  </div>
+</body>
+
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"></section>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>

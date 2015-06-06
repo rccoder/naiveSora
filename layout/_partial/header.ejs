@@ -1,0 +1,19 @@
+<div class="navbar-inner">
+  <div class="nav-narrow">
+    <a href="<%- url_for() %>" class="brand">
+      <span class="fa fa-mortar-board"><%= config.title %></span>
+      <p>
+        <% if (theme.subtitle){ %>
+          <%= theme.subtitle %>
+        <% } %>
+      </p>
+    </a>
+    <ul class="nav">
+      <% for (var i in theme.menu){ %>
+        <li>
+          <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</div>

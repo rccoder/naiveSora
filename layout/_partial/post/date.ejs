@@ -1,0 +1,11 @@
+<div class="day_month">
+    <a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+        <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, '0M/0D') %></time>
+    </a>    
+</div>
+<div class="year">
+    <a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+        <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, 'YYYY') %></time>
+    </a>
+</div>
+
